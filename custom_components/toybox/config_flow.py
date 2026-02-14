@@ -16,7 +16,7 @@ _LOGGER = logging.getLogger(__name__)
 
 async def validate_input(hass: HomeAssistant, data: dict) -> dict:
     """Validate the user input by attempting to authenticate."""
-    from toybox_api import ToyBoxClient, AuthenticationError, ConnectionError
+    from toybox_api import ToyBoxClient, AuthenticationError, ConnectionError as ToyBoxConnectionError
 
     client = ToyBoxClient()
     try:
@@ -25,7 +25,7 @@ async def validate_input(hass: HomeAssistant, data: dict) -> dict:
         return {"title": f"ToyBox ({data[CONF_EMAIL]})"}
     except AuthenticationError as err:
         raise InvalidAuth from err
-    except ConnectionError as err:
+    except ToyBoxConnectionError as err:
         raise CannotConnect from err
     except Exception as err:
         _LOGGER.exception("Unexpected error during validation")
