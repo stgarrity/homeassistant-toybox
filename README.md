@@ -4,7 +4,7 @@
 
 Custom Home Assistant integration for the [ToyBox 3D Printer](https://www.toybox.com/) via the [make.toys](https://www.make.toys) platform.
 
-Uses the [`toybox-api`](https://github.com/sgarrity/ha-toybox) Python library for Meteor DDP communication.
+Uses the [`toybox-api`](https://github.com/sgarrity/toybox-api) Python library for Meteor DDP communication.
 
 ## Features
 
@@ -47,7 +47,7 @@ This integration follows the two-project pattern:
 
 | Repo | Purpose |
 |------|---------|
-| [`ha-toybox`](https://github.com/sgarrity/ha-toybox) | Standalone Python API client (Meteor DDP over WebSocket) |
+| [`toybox-api`](https://github.com/sgarrity/toybox-api) | Standalone Python API client (Meteor DDP over WebSocket) |
 | [`homeassistant-toybox`](https://github.com/sgarrity/homeassistant-toybox) | This repo — HA integration (HACS compatible) |
 
 ## License
