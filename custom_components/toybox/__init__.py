@@ -60,3 +60,10 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         await data["client"].close()
 
     return unload_ok
+
+
+async def async_remove_config_entry_device(
+    hass: HomeAssistant, entry: ConfigEntry, device_entry
+) -> bool:
+    """Allow removal of orphaned devices."""
+    return True
