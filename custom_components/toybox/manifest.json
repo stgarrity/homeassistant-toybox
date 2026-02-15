@@ -1,9 +1,9 @@
 {
   "domain": "toybox",
   "name": "ToyBox 3D Printer",
-  "codeowners": ["@sgarrity"],
+  "codeowners": ["@stgarrity"],
   "config_flow": true,
-  "documentation": "https://github.com/sgarrity/homeassistant-toybox",
+  "documentation": "https://github.com/stgarrity/homeassistant-toybox",
   "integration_type": "device",
   "iot_class": "cloud_push",
   "requirements": ["toybox-api>=0.1.0"],
