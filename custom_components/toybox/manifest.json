@@ -6,8 +6,8 @@
   "documentation": "https://github.com/stgarrity/homeassistant-toybox",
   "integration_type": "device",
   "iot_class": "cloud_push",
-  "requirements": ["toybox-api>=0.1.0"],
-  "version": "0.1.0",
+  "requirements": ["toybox-3d-api>=0.1.0"],
+  "version": "0.1.1",
   "dependencies": [],
   "after_dependencies": []
 }
