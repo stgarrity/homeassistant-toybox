@@ -47,12 +47,14 @@ class ToyBoxOnlineSensor(
 ):
     """Binary sensor for printer online status."""
 
+    _attr_has_entity_name = True
+
     def __init__(self, coordinator: ToyBoxDataUpdateCoordinator) -> None:
         """Initialize sensor."""
         super().__init__(coordinator)
         printer = coordinator.data.printer
         self._attr_unique_id = f"{printer.printer_id}_online"
-        self._attr_name = f"{printer.display_name} Online"
+        self._attr_name = "Online"
         self._attr_device_class = BinarySensorDeviceClass.CONNECTIVITY
         self._attr_entity_category = EntityCategory.DIAGNOSTIC
         self._attr_device_info = _device_info(coordinator)
@@ -68,12 +70,14 @@ class ToyBoxPrintingActiveSensor(
 ):
     """Binary sensor for whether a print is actively running."""
 
+    _attr_has_entity_name = True
+
     def __init__(self, coordinator: ToyBoxDataUpdateCoordinator) -> None:
         """Initialize sensor."""
         super().__init__(coordinator)
         printer = coordinator.data.printer
         self._attr_unique_id = f"{printer.printer_id}_printing"
-        self._attr_name = f"{printer.display_name} Printing"
+        self._attr_name = "Printing"
         self._attr_device_class = BinarySensorDeviceClass.RUNNING
         self._attr_icon = "mdi:printer-3d-nozzle"
         self._attr_device_info = _device_info(coordinator)

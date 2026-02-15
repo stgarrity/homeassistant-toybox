@@ -160,6 +160,7 @@ class ToyBoxSensor(
     """Representation of a ToyBox sensor."""
 
     entity_description: ToyBoxSensorEntityDescription
+    _attr_has_entity_name = True
 
     def __init__(
         self,

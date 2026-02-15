@@ -30,7 +30,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             entry.data[CONF_EMAIL],
             entry.data[CONF_PASSWORD],
         )
-        await client.subscribe("user-data-small")
+        await client.setup()
 
     except ToyBoxConnectionError as err:
         await client.close()
